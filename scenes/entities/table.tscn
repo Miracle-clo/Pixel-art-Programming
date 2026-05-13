@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c06pbtnm4p8ox"]
+
+[ext_resource type="Script" uid="uid://dw1f21a0i1hcw" path="res://scenes/entities/table.gd" id="1_hgf75"]
+[ext_resource type="Texture2D" uid="uid://cm6jbpbwu66l6" path="res://assets/sprites/Furnitures/TopDownHouse_FurnitureState2.png" id="2_n2qov"]
+[ext_resource type="PackedScene" uid="uid://drmnwl77q0eim" path="res://scenes/ui/info_box.tscn" id="3_v2sso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2sso"]
+size = Vector2(24, 18)
+
+[node name="Table" type="Area2D" unique_id=164489173]
+script = ExtResource("1_hgf75")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1439937159]
+texture_filter = 1
+texture = ExtResource("2_n2qov")
+region_enabled = true
+region_rect = Rect2(84.01271, 43.789024, 24.16475, 19.525597)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1571968873]
+shape = SubResource("RectangleShape2D_v2sso")
+
+[node name="InfoBox" parent="." unique_id=417806675 instance=ExtResource("3_v2sso")]
+unique_name_in_owner = true
+offset_left = -41.0
+offset_top = -78.0
+offset_right = 42.0
+offset_bottom = -10.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

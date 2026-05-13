@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://kx8bjta8cwr"]
+
+[ext_resource type="Script" uid="uid://dqj4farbmu0rw" path="res://scenes/entities/window.gd" id="1_6k3ie"]
+[ext_resource type="Texture2D" uid="uid://b0gbaf5icgrcq" path="res://assets/sprites/Village/Pixel 16 v2 village free/Pixel 16 v2 village free.png" id="2_08ng8"]
+[ext_resource type="PackedScene" uid="uid://ege6b4nrhb02" path="res://scenes/ui/info_box_window.tscn" id="3_vk7ny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk7ny"]
+size = Vector2(44, 39)
+
+[node name="Window" type="Area2D" unique_id=1844035510]
+script = ExtResource("1_6k3ie")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=554975774]
+texture_filter = 1
+texture = ExtResource("2_08ng8")
+region_enabled = true
+region_rect = Rect2(18.49221, 120.68619, 43.78962, 39.96463)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1534067397]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_vk7ny")
+
+[node name="Info_win" parent="." unique_id=1016211588 instance=ExtResource("3_vk7ny")]
+unique_name_in_owner = true
+offset_left = -39.0
+offset_top = -103.0
+offset_right = 38.0
+offset_bottom = -20.0

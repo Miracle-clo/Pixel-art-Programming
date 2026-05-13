@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ege6b4nrhb02"]
+
+[ext_resource type="Script" uid="uid://d2bfifop8ra0h" path="res://scenes/ui/info_box_window.gd" id="1_rmrov"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1016211588]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_rmrov")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=860393258]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1302255755]
+layout_mode = 2
+
+[node name="TitleName" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1649143839]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1489603855]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "窗口状态:"
+
+[node name="QueueLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=710745874]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "窗口排队人数："
+
+[node name="MenuLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1922495540]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "今日菜单："

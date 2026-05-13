@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://drmnwl77q0eim"]
+
+[ext_resource type="Script" uid="uid://cvn5udqbep6bt" path="res://scenes/ui/info_box.gd" id="1_pl8j2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl8j2"]
+bg_color = Color(0.9862867, 0.36762965, 0.086293705, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1466271415]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl8j2")
+script = ExtResource("1_pl8j2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1685298615]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=621356054]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.43
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2096002499]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 3
+max_lines_visible = 3
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1415097372]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "餐桌状态："
+autowrap_mode = 2
+
+[node name="DetailLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=263418467]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "就餐人数："
+autowrap_mode = 3
